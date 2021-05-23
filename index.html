@@ -1,12 +1,333 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
+    <header>
+      <div>
+        <a>
+          <img
+            src="img/technomart_logo.png"
+            width="220"
+            height="47"
+            alt="Техномарт лого"
+          />
+        </a>
+        <p>
+          <label for="search-site-input">Поиск по сайту</label>
+          <input id="search-site-input" type="text" placeholder="Поиск:" />
+        </p>
+        <ul>
+          <li><a href="blank.html">Закладки: 0</a></li>
+          <li><a href="blank.html">Корзина: 0</a></li>
+          <li><a href="blank.html">Оформить заказ</a></li>
+        </ul>
+      </div>
+      <p>
+        Интернет-магазин<br />
+        строительных материалов<br />
+        и инструментов для ремонта
+      </p>
+      <address>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
+      </address>
+      <ul>
+        <li><a href="blank.html">Войти</a></li>
+        <li><a href="blank.html">Регистрация</a></li>
+      </ul>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="blank.html">Компания</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            <a href="blank.html">Новости</a>
+          </li>
+          <li>
+            <a href="blank.html">Спецпредложения</a>
+          </li>
+          <li>
+            <a href="blank.html">Доставка</a>
+          </li>
+          <li>
+            <a href="blank.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Главная страница</h1>
+      <section>
+        <h2>Каталог, скидки, доставка</h2>
+        <ul>
+          <li>
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <a href="catalog.html">Открыть каталог</a>
+            <button type="button">&lt;</button>
+            <button type="button">&gt;</button>
+          </li>
+          <li>
+            <h3>Материалы</h3>
+            <a href="catalog.html">На любой вкус</a>
+            <img src="img/icon.svg" width="44" height="65" alt="" />
+          </li>
+          <li>
+            <h3>Инструмент</h3>
+            <a href="catalog.html">На все случаи</a>
+            <img src="img/icon.svg" width="44" height="65" alt="" />
+          </li>
+          <li>
+            <h3>Техника</h3>
+            <a href="catalog.html">Для стройки</a>
+            <img src="img/icon.svg" width="44" height="65" alt="" />
+          </li>
+          <li>
+            <h3>Скидки 50%</h3>
+            <a href="blank.html">На 350 товаров</a>
+            <img src="img/icon.svg" width="44" height="65" alt="" />
+          </li>
+          <li>
+            <h3>Доставка</h3>
+            <a href="blank.html">Бесплатно</a>
+            <img src="img/icon.svg" width="44" height="65" alt="" />
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>
+          Популярные товары:
+          <a href="catalog.html">Все популярные товары</a>
+        </h2>
+        <ul>
+          <li>
+            <h3>Перфоратор BOSCH BFG 9000</h3>
+            <img src="img/photo.png" width="127" height="112" alt="" />
+            <p>
+              <s>32500 Р.</s>
+              <span>25500 Р.</span>
+            </p>
+          </li>
+          <li>
+            <h3>Перфоратор BOSCH BFG 3000</h3>
+            <img src="img/photo.png" width="127" height="112" alt="" />
+            <p>
+              <s>22500 Р.</s>
+              <span>15500 Р.</span>
+            </p>
+          </li>
+          <li>
+            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <img src="img/photo.png" width="127" height="112" alt="" />
+            <p>
+              <s>30500 Р.</s>
+              <span>25500 Р.</span>
+            </p>
+          </li>
+          <li>
+            <h3>Перфоратор BOSCH BFG 2000</h3>
+            <img src="img/photo.png" width="127" height="112" alt="" />
+            <p>
+              <s>22500 Р.</s>
+              <span>12500 Р.</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>
+          Популярные производители:
+          <a href="catalog.html">Все производители</a>
+        </h2>
+        <ul>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="Bosch" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="Makita" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="Dewalt" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img
+                src="img/photo.png"
+                width="220"
+                height="145"
+                alt="Интерскол"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="Hitachi" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="LG" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" width="220" height="145" alt="AEG" />
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              <img src="img/photo.png" alt="Metabo" width="220" height="145" />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Сервисы</h2>
+        <p>
+          Хороший интернет-магазин отличается от плохого не только ценами!<br />
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+        <ul>
+          <li><button type="button">Доставка</button></li>
+          <li><button type="button">Гарантия</button></li>
+          <li><button type="button">Кредит</button></li>
+        </ul>
+        <div>
+          <h3>Доставка</h3>
+          <p>
+            Мы с удовольствием доставим ваш товар прямо<br />
+            к вашему подъезду совершенно бесплатно!<br />
+            Ведь мы неплохо заработаем,<br />
+            поднимая его на ваш этаж!
+          </p>
+          <img src="img/car.png" alt="" width="468" height="261" />
+        </div>
+      </section>
+    </main>
+    <section>
+      <h2>КОМПАНИЯ «Техномарт»</h2>
+      <p>
+        Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+        ремонта и строительства не оставит равнодушными любителей сэкономить на
+        гастарбайтерах.
+      </p>
+      <p>
+        Мы можем доставить ваш товар в самые отдаленные точки России!<br />
+        Техномарт работает со многими транспортными компаниями:
+      </p>
+      <ul>
+        <li>Деловые линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="blank.html">Подробнее о компании</a>
+    </section>
+    <section>
+      <h2>Контакты</h2>
+      <p>
+        Вы можете забрать товар сами,<br />
+        заехав в наш офис:
+      </p>
+      <!-- Здесь будет карта -->
+      <a href="blank.html">Заблудились? Напишите нам!</a>
+    </section>
+    <footer>
+      <a>
+        <img
+          src="img/technomart_logo.png"
+          width="220"
+          height="47"
+          alt="Техномарт лого"
+        />
+      </a>
+      <section>
+        <h2>Наши контакты</h2>
+        <address>
+          г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
+          <a href="tel:+78005558628">+7 800 555-86-28</a>
+        </address>
+      </section>
+      <ul>
+        <li><a href="blank.html">Компания</a></li>
+        <li><a href="blank.html">Новости</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="blank.html">Доставка</a></li>
+        <li><a href="blank.html">Контакты</a></li>
+      </ul>
+      <ul>
+        <li><a href="catalog.html">Материалы</a></li>
+        <li><a href="catalog.html">Техника</a></li>
+        <li><a href="catalog.html">Инструмент</a></li>
+        <li><a href="blank.html">Спецпредложения</a></li>
+      </ul>
+      <section>
+        <h2>Copyright</h2>
+        <p>
+          &copy; 2010–2021 Компания «Техномарт»<br />
+          Все права защищены
+        </p>
+      </section>
+      <section>
+        <h2>Мы в соцсетях</h2>
+        <ul>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Обратная связь:</h2>
+        <address>mail@htmlacademy.ru</address>
+      </section>
+      <section>
+        <h2>Разработано —</h2>
+        <address>htmlacademy.ru</address>
+      </section>
+    </footer>
 
+    <section>
+      <h2>Задайте ваш вопрос</h2>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label
+            >Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия"
+          /></label>
+          <label
+            >Ваш e-mail:<input
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+          /></label>
+        </p>
+        <p>
+          <label for="email-textarea"> Текст письма: </label>
+          <textarea
+            id="email-textarea"
+            name="email-text"
+            placeholder="В свободной форме"
+            maxlength="1000"
+            rows="10"
+          ></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+        <button type="button">Х</button>
+      </form>
+    </section>
   </body>
 </html>
