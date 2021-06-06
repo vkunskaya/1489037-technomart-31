@@ -8,106 +8,119 @@
   <link rel="icon" href="img/favicons/152x152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <header>
-    <div>
-      <a href="index.html">
-        <img src=" img/logo-technomart.svg" width="220" height="47" alt="Техномарт лого" />
-      </a>
-      <p>
-        <label for="search-site-input">Поиск по сайту</label>
-        <input id="search-site-input" type="text" placeholder="Поиск:" />
-      </p>
-      <ul>
-        <li><a href="blank.html">Закладки: 0</a></li>
-        <li><a href="blank.html">Корзина: 0</a></li>
-        <li><a href="blank.html">Оформить заказ</a></li>
-      </ul>
+<body class="page-body">
+  <header class="main-header">
+    <div class="menu-wrapper">
+      <div class="content-wrapper">
+        <a class="logo main-header-logo">
+          <img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт лого">
+        </a>
+        <p class="search-site">
+          <label class="visually-hidden" for="search-page-input">Поиск по сайту</label>
+          <input id="search-page-input" type="text" placeholder="Поиск:">
+        </p>
+        <ul class="main-header-menu">
+          <li class="main-header-menu-item menu-bookmarks"><a href="blank.html">Закладки: 0</a></li>
+          <li class="main-header-menu-item menu-cart"><a href="blank.html">Корзина: 0</a></li>
+          <li class="main-header-menu-item menu-order"><a href="blank.html">Оформить заказ</a></li>
+        </ul>
+      </div>
     </div>
-    <p>
-      Интернет-магазин строительных материалов и инструментов для ремонта
-    </p>
-    <address>
-      <a href="tel:+78005558628">+7 800 555-86-28</a>
-      г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
-    </address>
-    <ul>
-      <li><a href="blank.html">Войти</a></li>
-      <li><a href="blank.html">Регистрация</a></li>
-    </ul>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
+    <div class="content-wrapper">
+      <p class="main-header-title">
+        Интернет-магазин строительных материалов и инструментов для ремонта
+      </p>
+      <address class="main-header-contacts">
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
+      </address>
+      <ul class="main-header-entry">
+        <li class="main-header-entry-item entry-login"><a href="blank.html">Войти</a></li>
+        <li class="main-header-entry-item entry-registration"><a href="blank.html">Регистрация</a></li>
+      </ul>
+      <nav class="main-navigation">
+        <ul class="page-navigation">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="blank.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="blank.html">Новости</a></li>
+          <li><a href="blank.html">Спецпредложения</a></li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main-container">
+    <div class="content-wrapper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="content-wrapper">
+      <a class="logo main-footer-logo">
+        <img src="img/logo-technomart.svg" width="138" height="23" alt="Техномарт лого">
+      </a>
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <address class="main-footer-contacts">
+          г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
+          <a class="footer-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+        </address>
+      </section>
+      <ul class="footer-navigation">
         <li><a href="blank.html">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
         <li><a href="blank.html">Новости</a></li>
-        <li><a href="blank.html">Спецпредложения</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
         <li><a href="blank.html">Доставка</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
-    </nav>
-  </header>
-  <main>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-      mollit anim id est laborum.
-    </p>
-  </main>
-  <footer>
-    <a>
-      <img src="img/logo-technomart.svg" width="220" height="47" alt="Техномарт лого">
-    </a>
-    <section>
-      <h2>Наши контакты</h2>
-      <address>
-        г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
-      </address>
-    </section>
-    <ul>
-      <li><a href="blank.html">Компания</a></li>
-      <li><a href="blank.html">Новости</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="blank.html">Доставка</a></li>
-      <li><a href="blank.html">Контакты</a></li>
-    </ul>
-    <ul>
-      <li><a href="catalog.html">Материалы</a></li>
-      <li><a href="catalog.html">Техника</a></li>
-      <li><a href="catalog.html">Инструмент</a></li>
-      <li><a href="blank.html">Спецпредложения</a></li>
-    </ul>
-    <section>
-      <h2>Copyright</h2>
-      <p>
-        &copy; 2010–2021 Компания «Техномарт»<br>
-        Все права защищены
-      </p>
-    </section>
-    <section>
-      <h2>Мы в соцсетях</h2>
-      <ul>
-        <li><a href="#">VK</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
+      <ul class="footer-catalog-filters-list">
+        <li><a href="catalog.html">Материалы</a></li>
+        <li><a href="catalog.html">Техника</a></li>
+        <li><a href="catalog.html">Инструмент</a></li>
+        <li><a href="blank.html">Спецпредложения</a></li>
       </ul>
-    </section>
-    <section>
-      <h2>Обратная связь:</h2>
-      <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</address>
-    </section>
-    <section>
-      <h2>Разработано —</h2>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</address>
-    </section>
+    </div>
+    <div class="footer-info-wrapper">
+      <div class="content-wrapper">
+        <section class="copyright">
+          <h2 class="visually-hidden">Copyright</h2>
+          <p>
+            &copy; 2010–2021 Компания «Техномарт»<br>
+            Все права защищены
+          </p>
+        </section>
+        <section class="social-contacts">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="socials-list">
+            <li><a href="#"><span class="visually-hidden">VK</span></a></li>
+            <li><a href="#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a href="#"><span class="visually-hidden">Instagram</span></a></li>
+          </ul>
+        </section>
+        <section class="email-us">
+          <h2>Обратная связь:</h2>
+          <a class="email-us-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </section>
+        <section class="developed">
+          <h2>Разработано —</h2>
+          <a class="developed-info-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </section>
+      </div>
+    </div>
   </footer>
 </body>
 
