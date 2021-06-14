@@ -354,15 +354,19 @@
   color: var(--basic-white);
 }
 
-.page-navigation a:hover,
-.page-navigation a:focus {
+.page-navigation a[href]:hover,
+.page-navigation a[href]:focus {
   color: var(--basic-active-text);
   background-color: var(--basic-dark);
 }
 
-.page-navigation a:active {
+.page-navigation a[href]:active {
   color: var(--basic-active-text);
   background-color: var(--basic-blacklight);
+}
+
+.page-navigation a:not([href]) {
+  cursor: default;
 }
 
 /* footer */
@@ -382,14 +386,18 @@
 }
 
 .footer-contacts-phone:hover,
-.footer-navigation a:hover,
-.footer-navigation a:focus,
+.footer-navigation a[href]:hover,
+.footer-navigation a[href]:focus,
 .footer-catalog-filters-list a:hover {
   text-decoration: underline;
 }
 
-.footer-navigation a:active {
+.footer-navigation a[href]:active {
   color: var(--basic-active-textdark);
+}
+
+.footer-navigation a:not([href]) {
+  cursor: default;
 }
 
 .footer-catalog-filters-list {
@@ -600,8 +608,11 @@
   width: 141px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: var(--basic-white);
   background-color: var(--basic-red)
+}
+
+.product-price.product-current-price {
+  color: var(--basic-white);
 }
 
 .product:hover {
@@ -704,7 +715,8 @@
   background-color: var(--basic-dark);
 }
 
-.services-button-active {
+.services-button-active,
+.services-button-active:hover {
   color: var(--basic-greydark);
   background-color: var(--basic-white);
   box-shadow: 0 1px 0 var(--basic-white),
@@ -952,16 +964,20 @@
   border-radius: 2px;
 }
 
-.catalog-pages-list a:hover,
-.catalog-pages-list a:focus,
-.catalog-change-page-item a:hover,
-.catalog-change-page-item a:focus {
+.catalog-pages-list a[href]:hover,
+.catalog-pages-list a[href]:focus,
+.catalog-change-page-item a[href]:hover,
+.catalog-change-page-item a[href]:focus {
   border-color: var(--basic-greylight);
 }
 
-.catalog-pages-list a:active,
-.catalog-change-page-item a:active {
+.catalog-pages-list a[href]:active,
+.catalog-change-page-item a[href]:active {
   border-color: var(--basic-red);
+}
+
+.catalog-pages-list a:not([href]) {
+  cursor: default;
 }
 
 .catalog-page-item a {
