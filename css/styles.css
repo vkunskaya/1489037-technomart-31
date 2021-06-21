@@ -427,8 +427,7 @@ button {
 
 .main-footer {
   display: grid;
-  grid-template-rows: 1fr 107px;
-  min-height: 300px;
+  grid-template-rows: 1fr auto;
   background-color: var(--basic-greydark);
   color: var(--basic-whitedark);
 }
@@ -442,6 +441,7 @@ button {
 .footer-top-wrapper {
   display: grid;
   grid-template-columns: 350px 1fr;
+  padding-bottom: 54px;
 }
 
 .main-footer-contacts {
@@ -490,7 +490,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  height: 107px;
+  padding: 35px 0;
 }
 
 .copyright p {
@@ -661,27 +661,34 @@ button {
   gap: 20px;
 }
 
-.slider-wrapper {
+.catalog-slider {
   grid-area: slider;
-  width: 620px;
-  height: 266px;
+  display: grid;
+  grid-auto-flow: column;
   overflow: hidden;
 }
 
-.catalog-slider {
+.catalog-slider-item {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-rows: 104px auto auto;
+  width: 620px;
+  height: 266px;
+  padding-bottom: 27px;
 }
 
-.catalog-slider-item {
-  position: relative;
-  max-height: 266px;
+.catalog-slider-item:nth-child(1) {
+  background-image: url("../img/slider/perforator.jpg");
+  background-repeat: no-repeat;
+  background-size: 620px 266px;
+}
+
+.catalog-slider-item:nth-child(2) {
+  background-image: url("..img/slider/drill.jpg");
+  background-repeat: no-repeat;
+  background-size: 620px 266px;
 }
 
 .slider-item-description-container {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 23px 24px 16px;
   background: var(--special-black-background);
@@ -701,15 +708,16 @@ button {
   max-width: 258px;
 }
 
-.catalog-slider-item img {
-  width: 620px;
-  height: 266px;
+.slider-item-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 24px 0;
 }
 
 .catalog-slider-direction-button {
-  width: 21px;
-  height: 39px;
-  padding: 6px;
+  width: 29px;
+  height: 47px;
+  padding: 4px;
   text-align: center;
   cursor: pointer;
   background-color: transparent;
@@ -722,6 +730,12 @@ button {
 
 .catalog-slider-direction-button:active {
   background-color: var(--basic-darkest-background);
+}
+
+.catalog-slider-open-link {
+  justify-self: start;
+  align-self: end;
+  margin-left: 24px;
 }
 
 .popular-section {
@@ -770,7 +784,6 @@ button {
 }
 
 .product h3 {
-  margin: 0;
   margin-top: 8px;
   margin-bottom: 7px;
   font-family: "PT Sans", "Open Sans", sans-serif;
@@ -893,8 +906,7 @@ button {
 }
 
 .popular-producers-item img {
-  width: 202px;
-  height: 129px;
+  display: block;
 }
 
 .services {
@@ -950,7 +962,7 @@ button {
 
 .services-description-list-item {
   width: 619px;
-  min-height: 286px;
+  padding-bottom: 115px;
   padding-left: 80px;
   background-repeat: no-repeat;
   background-position: right bottom;
