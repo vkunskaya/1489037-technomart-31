@@ -211,6 +211,28 @@ button {
   padding-right: 10px;
 }
 
+.new-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.new-item::after {
+  content: "NEW";
+  position: absolute;
+  top: 8px;
+  right: -28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  transform: rotate(45deg);
+  background-color: var(--basic-red);
+}
+
 /* page header */
 
 .main-header {
@@ -243,7 +265,31 @@ button {
   margin: 0;
 }
 
+.search-site::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  -webkit-mask-image: url("../img/icons/search.svg");
+  mask-image: url("../img/icons/search.svg");
+  background-color: white;
+  opacity: 0.3;
+}
+
+.search-site:hover::before,
+.search-site:focus-within::before {
+  opacity: 1;
+}
+
+.search-site:focus-within::before {
+  background-color: var(--basic-red);
+  opacity: 1;
+}
+
 .search-site input {
+  width: 100%;
   height: 42px;
   padding-left: 42px;
   color: var(--basic-black);
@@ -258,6 +304,7 @@ button {
 .search-site input:focus,
 .search-site input:active {
   background-color: var(--basic-white);
+  outline-style: none;
 }
 
 .main-header-menu {
@@ -268,7 +315,8 @@ button {
 
 .main-header-menu-item a,
 .main-header-menu-order {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 18px;
   padding: 9px 17px;
   color: var(--basic-white);
@@ -278,7 +326,7 @@ button {
 
 .menu-bookmarks a,
 .menu-cart a {
-  padding-left: 45px;
+  padding-left: 20px;
   padding-right: 26px;
 }
 
@@ -290,6 +338,31 @@ button {
 .menu-cart a:active {
   color: var(--basic-active-text);
   background-color: var(--basic-blacklight);
+}
+
+.menu-bookmarks a::before {
+  content: "";
+  width: 14px;
+  height: 16px;
+  margin-right: 9px;
+  margin-bottom: 2px;
+  background-image: url("../img/icons/bookmark.svg");
+  opacity: 0.3;
+}
+
+.menu-cart a::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  background-image: url("../img/icons/cart.svg");
+  opacity: 0.3;
+}
+
+.menu-bookmarks a:hover::before,
+.menu-cart a:hover::before {
+  opacity: 1;
 }
 
 .main-header-menu-order {
@@ -336,9 +409,11 @@ button {
 
 .main-header-contacts a {
   margin-bottom: 3px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
-  padding: 7px 0 7px 24px;
+  padding: 7px 0;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -348,9 +423,25 @@ button {
   background-color: var(--basic-background);
 }
 
+.main-header-contacts a::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 19px;
+  margin-right: 16px;
+  -webkit-mask-image: url("../img/icons/phone.svg");
+  mask-image: url("../img/icons/phone.svg");
+  background-color: var(--basic-greylight);
+}
+
 .main-header-contacts a:hover,
-.main-header-contacts a:focus {
+.main-header-contacts a:focus,
+.main-header-contacts a:active {
   text-decoration: underline;
+}
+
+.main-header-contacts a:active::before {
+  background-color: var(--basic-red);
 }
 
 .main-header-entry {
@@ -380,8 +471,30 @@ button {
 }
 
 .entry-login a {
-  padding-left: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: 19px;
   padding-right: 27px;
+}
+
+.entry-login a::before {
+  content: "";
+  width: 20px;
+  height: 17px;
+  margin-right: 7px;
+  -webkit-mask-image: url("../img/icons/login.svg");
+  mask-image: url("../img/icons/login.svg");
+  background-color: var(--basic-greylight);
+}
+
+
+.entry-login a:hover::before,
+.entry-login a:focus::before {
+  background-color: var(--basic-grey);
+}
+
+.entry-login a:active::before {
+  background-color: var(--basic-greylight);
 }
 
 .user-info-wrapper {
@@ -588,6 +701,33 @@ button {
 .socials-list a:focus,
 .socials-list a:active {
   background-color: var(--basic-red);
+}
+
+.socials-list a::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+}
+
+.vkontakte::before {
+  -webkit-mask-image: url("../img/icons/vk.svg");
+  mask-image: url("../img/icons/vk.svg");
+}
+
+.facebook::before {
+  -webkit-mask-image: url("../img/icons/fb.svg");
+  mask-image: url("../img/icons/fb.svg");
+}
+
+.instagram::before {
+  -webkit-mask-image: url("../img/icons/instagram.svg");
+  mask-image: url("../img/icons/instagram.svg");
 }
 
 .footer-info-contact-wrapper {
@@ -801,6 +941,10 @@ button {
   background-color: var(--basic-darkest-background);
 }
 
+.slider-next-button {
+  transform: rotate(180deg);
+}
+
 .catalog-slider-open-link {
   grid-column: 1 / 2;
   grid-row-start: -2;
@@ -878,15 +1022,38 @@ button {
 
 .product-current-price {
   align-self: end;
+  position: relative;
+  display: block;
   margin-top: 13px;
-  width: 141px;
+  padding-left: 32px;
+  padding-right: 44px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: var(--basic-red)
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 2px;
 }
 
-.product-current-price {
-  color: var(--basic-white);
+.product-current-price::after,
+.product-current-price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 38px;
+  background-color: var(--basic-white);
+}
+
+.product-current-price::before {
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.product-current-price::after {
+  transform: rotate(-45deg);
+  transform-origin: top left;
 }
 
 .product:hover {
@@ -999,9 +1166,8 @@ button {
 }
 
 .services-wrapper {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  padding-top: 50px;
+  display: flex;
+  align-items: center;
   margin-top: 21px;
 }
 
@@ -1037,12 +1203,28 @@ button {
 }
 
 .services-description-list {
+  flex-grow: 1;
+  position: relative;
   align-self: center;
 }
 
+.services-description-list::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-image: url("../img/border-shadow.png");
+  background-position-y: start;
+  background-repeat: no-repeat;
+}
+
 .services-description-list-item {
+  padding-top: 47px;
   padding-bottom: 115px;
   padding-left: 80px;
+
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -1114,7 +1296,18 @@ button {
 }
 
 .transport-companies-list li {
+  display: flex;
+  align-items: center;
   margin-bottom: 12px;
+}
+
+.transport-companies-list li::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-right: 12px;
+  background-color: var(--basic-red);
 }
 
 .company-info-link {
