@@ -68,7 +68,7 @@
   --basic-background: #F3F7F9;
   --basic-backgrounddark: #F9F5F0;
   --basic-backgrounddarkest: #F4F4F4;
-  --basic-white: white;
+  --basic-white: #FFFFFF;
   --basic-whitedark: #F1F5F7;
   --basic-black: black;
   --basic-blacklight: #161D29;
@@ -211,13 +211,13 @@ button {
   padding-right: 10px;
 }
 
-.new-item {
+[data-new] {
   position: relative;
   overflow: hidden;
 }
 
-.new-item::after {
-  content: "NEW";
+[data-new]::after {
+  content: attr(data-new);
   position: absolute;
   top: 8px;
   right: -28px;
@@ -230,6 +230,7 @@ button {
   line-height: 18px;
   color: var(--basic-white);
   transform: rotate(45deg);
+  text-transform: uppercase;
   background-color: var(--basic-red);
 }
 
@@ -274,7 +275,7 @@ button {
   height: 17px;
   -webkit-mask-image: url("../img/icons/search.svg");
   mask-image: url("../img/icons/search.svg");
-  background-color: white;
+  background-color: var(--basic-white);
   opacity: 0.3;
 }
 
@@ -708,26 +709,18 @@ button {
   display: block;
   width: 44px;
   height: 44px;
-  background-color: white;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: 50% 50%;
-  mask-position: 50% 50%;
 }
 
 .vkontakte::before {
-  -webkit-mask-image: url("../img/icons/vk.svg");
-  mask-image: url("../img/icons/vk.svg");
+  background: url("../img/icons/vk.svg") no-repeat center;
 }
 
 .facebook::before {
-  -webkit-mask-image: url("../img/icons/fb.svg");
-  mask-image: url("../img/icons/fb.svg");
+  background: url("../img/icons/fb.svg") no-repeat center;
 }
 
 .instagram::before {
-  -webkit-mask-image: url("../img/icons/instagram.svg");
-  mask-image: url("../img/icons/instagram.svg");
+  background: url("../img/icons/instagram.svg") no-repeat center;
 }
 
 .footer-info-contact-wrapper {
