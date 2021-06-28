@@ -488,7 +488,6 @@ button {
   background-color: var(--basic-greylight);
 }
 
-
 .entry-login a:hover::before,
 .entry-login a:focus::before {
   background-color: var(--basic-grey);
@@ -505,7 +504,9 @@ button {
 .user-profile-logout {
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 25px;
+  grid-template-columns: 1fr 20px;
+  gap: 8px;
+  align-items: center;
   padding: 12px 15px;
   font-size: 21px;
   line-height: 21px;
@@ -514,7 +515,39 @@ button {
 }
 
 .user-profile-link {
-  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.user-profile-link::before {
+  content: "";
+  margin-right: 19px;
+  margin-bottom: 2px;
+  display: block;
+  width: 29px;
+  height: 18px;
+  -webkit-mask: url("../img/icons/user.svg") no-repeat;
+  mask: url("../img/icons/user.svg") no-repeat;
+  background-color: var(--basic-greylight);
+}
+
+.user-profile-link:hover::before {
+  background-color: var(--basic-grey);
+}
+
+.logout-link {
+  display: block;
+  width: 20px;
+  height: 18px;
+  -webkit-mask: url("../img/icons/logout.svg") no-repeat;
+  mask: url("../img/icons/logout.svg") no-repeat;
+  background-color: var(--basic-greylight);
+}
+
+.logout-link:hover {
+  background-color: var(--basic-grey);
 }
 
 .user-info-links {
@@ -524,8 +557,27 @@ button {
 }
 
 .user-info-links-item:not(:last-of-type) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   text-align: end;
-  padding-right: 15px;
+}
+
+.user-info-links-item:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 14px;
+  align-items: center;
+}
+
+.user-info-links-item:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-left: 14px;
+  border-radius: 50%;
+  background-color: var(--basic-greydark);
 }
 
 .user-info-links-item a {
@@ -1493,8 +1545,20 @@ button {
 }
 
 .breadcrumbs li {
+  display: flex;
+  align-items: center;
   line-height: 18px;
-  padding-right: 15px;
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+  content: "";
+  margin-left: 17px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid var(--basic-greylight);
+  border-bottom: 1px solid var(--basic-greylight);
+  transform: rotate(-45deg);
 }
 
 .breadcrumbs li:not(:first-child) {
@@ -1586,9 +1650,49 @@ button {
 }
 
 .price-slider-container {
+  position: relative;
   margin-top: 11px;
   margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: var(--special-background);
+}
+
+.price-slider-container .range-scale {
+  width: 100%;
+  height: 2px;
+  background-color: var(--basic-greylight);
+}
+
+.range-bar {
+  width: 70%;
+  height: 2px;
+  background-color: var(--basic-green);
+}
+
+.range-control {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  background-color: var(--basic-inactive-text);
+  box-shadow: 0 1px 2px var(--basic-inactive-text);
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.control-min {
+  left: 0;
+}
+
+.control-max {
+  left: 57%;
 }
 
 .filter-price-container {
@@ -1607,19 +1711,58 @@ button {
   background-color: var(--special-background);
 }
 
-.filter-producers-item {
-  margin-top: 15px;
-  padding-left: 35px;
+.filter-price-input:focus {
+  outline: none;
 }
 
-.filter-power-item {
-  margin-top: 15px;
-  padding-left: 35px;
+.filter-price-input::-webkit-outer-spin-button,
+.filter-price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.filter-power-item label,
-.filter-producers-item label {
+.filter-price-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.filter-option {
+  margin-top: 15px;
+  position: relative;
+}
+
+.filter-option label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+
+.filter-option label::before {
+  content: "";
+  margin-right: 10px;
+  display: block;
+
+}
+
+.filter-check-item label::before {
+  width: 26px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter-check-item input:checked + label::before {
+  background-image: url("../img/icons/checkbox-on.svg");
+}
+
+.filter-radio-item label::before {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icons/radio-off.svg");
+}
+
+.filter-radio-item input:checked + label::before {
+  background-image: url("../img/icons/radio-on.svg");
 }
 
 .apply-filter-button {
@@ -1627,6 +1770,7 @@ button {
   padding: 10px 0;
   border: 1px solid var(--special-greylight);
   background-color: var(--basic-white);
+  cursor: pointer;
 }
 
 /* catalog products list */
@@ -1761,12 +1905,15 @@ button {
 }
 
 .catalog-products-description h2 {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
 .catalog-products-description p {
+  line-height: 24px;
   text-transform: none;
 }
 
