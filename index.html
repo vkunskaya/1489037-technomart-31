@@ -84,40 +84,46 @@
             <a href="blank.html">Бесплатно</a>
           </li>
         </ul>
-        <ul class="clear-list catalog-slider">
-          <li class="catalog-slider-item slider-item-active">
-            <img class="slider-image" src="img/slider/perforator.jpg" width="620" height="266" alt="">
-            <div class="slider-item-description-container">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-            </div>
-            <div class="slider-item-buttons-container">
-              <button class="catalog-slider-direction-button slider-previous-button" type="button">
-                <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
-              </button>
-              <button class="catalog-slider-direction-button slider-next-button" type="button">
-                <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
-              </button>
-            </div>
-            <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
-          </li>
-          <li class="catalog-slider-item">
-            <img class="slider-image" src="img/slider/drill.jpg" width="620" height="266" alt="">
-            <div class="slider-item-description-container">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-            </div>
-            <div class="slider-item-buttons-container">
-              <button class="catalog-slider-direction-button slider-previous-button" type="button">
-                <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
-              </button>
-              <button class="catalog-slider-direction-button slider-next-button" type="button">
-                <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
-              </button>
-            </div>
-            <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
-          </li>
-        </ul>
+        <div class="catalog-slider-wrapper">
+          <ul class="clear-list catalog-slider">
+            <li class="catalog-slider-item">
+              <img class="slider-image" src="img/slider/drill.jpg" width="620" height="266" alt="">
+              <div class="slider-item-description-container">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+              </div>
+              <div class="slider-item-buttons-container">
+                <button class="catalog-slider-direction-button slider-previous-button" type="button">
+                  <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
+                </button>
+                <button class="catalog-slider-direction-button slider-next-button" type="button">
+                  <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
+                </button>
+              </div>
+              <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
+            </li>
+            <li class="catalog-slider-item slider-item-active">
+              <img class="slider-image" src="img/slider/perforator.jpg" width="620" height="266" alt="">
+              <div class="slider-item-description-container">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+              </div>
+              <div class="slider-item-buttons-container">
+                <button class="catalog-slider-direction-button slider-previous-button" type="button">
+                  <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
+                </button>
+                <button class="catalog-slider-direction-button slider-next-button" type="button">
+                  <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
+                </button>
+              </div>
+              <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
+            </li>
+          </ul>
+          <ul class="clear-list slider-dots-list">
+            <li class="slider-dot" aria-label="Первый слайд"></li>
+            <li class="slider-dot slider-dot-active" aria-label="Второй слайд"></li>
+          </ul>
+        </div>
 
       </div>
     </section>
@@ -392,15 +398,18 @@
     <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal-map modal-closed">
     <h2 class="visually-hidden">Мы на карте</h2>
-    <img src="img/map-big.png" width="943" height="449"
-      alt="Наш адрес на карте: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133173!2d30.315220216369802!3d59.968265981886915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sby!4v1625077649299!5m2!1sen!2sby"
+      width="943" height="442" allowfullscreen
+      title="Наш адрес на карте: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П"></iframe>
+
     <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
   </section>
 
 
-  <section class="modal modal-interactive modal-cart">
+  <section class="modal modal-interactive modal-cart modal-closed">
     <div class="modal-content">
       <div class="modal-cart-header-wrapper">
         <h2>Товар добавлен в корзину!</h2>

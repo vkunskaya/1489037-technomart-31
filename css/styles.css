@@ -411,10 +411,11 @@ button {
 }
 
 .main-header-contacts a {
+  margin-bottom: 3px;
   display: flex;
   align-items: center;
   width: 270px;
-  padding: 7px 37px;
+  padding: 5px 37px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -653,13 +654,13 @@ button {
 .main-footer-logo {
   display: block;
   margin-bottom: 28px;
-  padding: 17px 41px;
+  padding: 20px 41px 13px;
 }
 
 .footer-top-wrapper {
   display: grid;
   grid-template-columns: 350px 1fr;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 }
 
 .main-footer-contacts {
@@ -725,7 +726,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding-top: 30px;
+  padding-top: 32px;
   padding-bottom: 30px;
 }
 
@@ -851,14 +852,14 @@ button {
 
 .page-info-list-item {
   width: 300px;
-  padding: 22px 24px 20px;
+  padding: 21px 22px 20px;
   background-repeat: no-repeat;
-  background-position-y: center;
+  background-position-y: 54%;
 }
 
 .page-info-list-item h3 {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -929,11 +930,42 @@ button {
   gap: 20px;
 }
 
-.catalog-slider {
+.catalog-slider-wrapper {
+  position: relative;
   grid-area: slider;
+  overflow: hidden;
+}
+
+.slider-dots-list {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+}
+
+.slider-dot-active {
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-red);
+  border: 2px solid var(--basic-white);
+}
+
+.slider-dot:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.catalog-slider {
   display: grid;
   grid-auto-flow: column;
-  overflow: hidden;
 }
 
 .slider-item-active {
@@ -1019,7 +1051,7 @@ button {
 }
 
 .popular-section {
-  padding-bottom: 70px;
+  padding-bottom: 71px;
 }
 
 .section-header-wrapper {
@@ -1027,8 +1059,8 @@ button {
   grid-template-columns: 1fr max-content;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px;
-  padding: 25px 14px 26px 28px;
+  margin-bottom: 19px;
+  padding: 26px 14px 26px 30px;
   background-color: var(--basic-backgrounddark);
 }
 
@@ -1056,9 +1088,11 @@ button {
   grid-template-rows: 164px auto 21px min-content;
   justify-items: center;
   width: 220px;
+  min-height: 318px;
   padding: 6px 18px 21px;
   text-align: center;
   border: 1px solid var(--special-greylight);
+  background-color: var(--basic-white);
 }
 
 .product-image {
@@ -1093,7 +1127,7 @@ button {
   align-self: end;
   position: relative;
   display: block;
-  margin-top: 13px;
+  margin-top: 10px;
   margin-left: 13px;
   padding-left: 32px;
   padding-right: 44px;
@@ -1256,12 +1290,11 @@ button {
 
 .services-container {
   padding-top: 64px;
-  padding-bottom: 6px;
 }
 
 .services h2 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1275,7 +1308,7 @@ button {
 }
 
 .services-list {
-  margin-bottom: 46px;
+  margin-bottom: 41px;
 }
 
 .services-button {
@@ -1324,7 +1357,7 @@ button {
 }
 
 .services-description-list-item {
-  padding-top: 47px;
+  padding-top: 50px;
   padding-bottom: 126px;
   padding-left: 80px;
 
@@ -1349,7 +1382,7 @@ button {
 .services-delivery {
   background-image: url("../img/delivery.png");
   background-size: 468px auto;
-  background-position-x: right;
+  background-position: right bottom;
 }
 
 .services-warranty {
@@ -1375,7 +1408,7 @@ button {
 
 .company-info,
 .company-contacts {
-  padding: 70px 0;
+  padding: 74px 0 70px;
 }
 
 .company-contacts {
@@ -1444,10 +1477,20 @@ button {
 /* modal window */
 
 .modal {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   width: 620px;
   box-shadow: inset 0 7px 0 var(--basic-red),
               var(--drop-shadow);
+  background-color: var(--basic-white);
+}
+
+.modal.modal-closed {
+  display: none;
 }
 
 .modal-close-button {
@@ -1462,6 +1505,15 @@ button {
   background-color: transparent;
   background-position: center;
   cursor: pointer;
+  transform: scale(1);
+}
+
+.modal-close-button:hover {
+  transform: scale(1.05);
+}
+
+.modal-close-button:active {
+  transform: scale(1);
 }
 
 .modal-interactive {
@@ -1483,6 +1535,11 @@ button {
 }
 
 /* contact company modal */
+
+.modal-contact-company {
+  top: auto;
+  bottom: 200px;
+}
 
 .contact-company-form-content {
   display: grid;
@@ -1543,12 +1600,23 @@ button {
 /* map modal */
 
 .modal-map {
+  top: auto;
+  bottom: 200px;
   width: 943px;
   height: 449px;
   padding-top: 7px;
 }
 
+.modal-map iframe {
+  border: none;
+}
+
 /* cart modal */
+
+.modal-cart {
+  bottom: auto;
+  top: 120px;
+}
 
 .modal-content {
   padding: 62px 81px 50px;
@@ -2014,5 +2082,3 @@ button {
   line-height: 24px;
   text-transform: none;
 }
-
-
