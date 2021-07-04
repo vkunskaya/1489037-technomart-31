@@ -605,7 +605,7 @@ button {
 
 .main-navigation {
   grid-column: 1/-1;
-  margin-top: 40px;
+  margin-top: 41px;
   background-color: var(--basic-greydark);
   box-shadow: inset 0 -5px 0 var(--basic-dark);
 }
@@ -726,8 +726,8 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 29px;
 }
 
 .copyright p {
@@ -1051,7 +1051,7 @@ button {
 }
 
 .popular-section {
-  padding-bottom: 71px;
+  padding-bottom: 70px;
 }
 
 .section-header-wrapper {
@@ -1308,7 +1308,7 @@ button {
 }
 
 .services-list {
-  margin-bottom: 41px;
+  margin-bottom: 46px;
 }
 
 .services-button {
@@ -1358,7 +1358,7 @@ button {
 
 .services-description-list-item {
   padding-top: 50px;
-  padding-bottom: 126px;
+  padding-bottom: 130px;
   padding-left: 80px;
 
   background-repeat: no-repeat;
@@ -1367,7 +1367,7 @@ button {
 
 .services-description-list-item h3 {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1381,8 +1381,8 @@ button {
 
 .services-delivery {
   background-image: url("../img/delivery.png");
-  background-size: 468px auto;
-  background-position: right bottom;
+  background-size: 470px auto;
+  background-position: right bottom 3px;
 }
 
 .services-warranty {
@@ -1408,7 +1408,7 @@ button {
 
 .company-info,
 .company-contacts {
-  padding: 74px 0 70px;
+  padding: 70px 0;
 }
 
 .company-contacts {
@@ -1430,8 +1430,7 @@ button {
 }
 
 .transport-companies-list {
-  margin-bottom: 21px;
-  padding-top: 4px;
+  margin-bottom: 22px;
 }
 
 .transport-companies-list li {
@@ -1460,7 +1459,7 @@ button {
 }
 
 .company-contacts-map {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   display: block;
   background-color: var(--basic-background)
 }
