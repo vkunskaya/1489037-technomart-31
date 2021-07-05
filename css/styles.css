@@ -1674,7 +1674,7 @@ button {
 }
 
 .breadcrumbs {
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .breadcrumbs li {
@@ -1685,10 +1685,10 @@ button {
 
 .breadcrumbs li:not(:last-of-type)::after {
   content: "";
-  margin-left: 14px;
+  margin-left: 16px;
   display: block;
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-right: 1px solid var(--basic-greylight);
   border-bottom: 1px solid var(--basic-greylight);
   transform: rotate(-45deg);
@@ -1728,7 +1728,7 @@ button {
 
 .catalog-header {
   margin: 0;
-  padding: 30px 29px;
+  padding: 29px 29px 30px;
   background-color: var(--basic-whitedark);
   font-size: 30px;
   line-height: 30px;
@@ -1772,7 +1772,7 @@ button {
 }
 
 .catalog-filter-form fieldset:last-of-type {
-  padding-bottom: 36px;
+  padding-bottom: 33px;
 }
 
 .catalog-filter-form legend {
@@ -2010,7 +2010,7 @@ button {
   grid-template-columns: repeat(3, min-content);
   gap: 18px 20px;
   margin-top: 28px;
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
 
 .catalog-pages-list {
@@ -2047,7 +2047,7 @@ button {
 }
 
 .catalog-page-item a {
-  padding: 10px 15px;
+  padding: 9px 15px;
 }
 
 .catalog-page-item-active a {
@@ -2056,7 +2056,7 @@ button {
 }
 
 .catalog-change-page-item a {
-  padding: 10px 32px;
+  padding: 9px 32px;
 }
 
 /* catalog product description */
@@ -2064,7 +2064,7 @@ button {
 .catalog-products-description {
   grid-column: 1 / -1;
   padding-top: 65px;
-  padding-bottom: 71px;
+  padding-bottom: 70px;
   background-color: var(--basic-background);
 }
 
