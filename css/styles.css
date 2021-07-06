@@ -534,12 +534,17 @@ button {
   background-color: var(--basic-greylight);
 }
 
-.user-profile-link:hover::before {
+.user-profile-link:hover::before,
+.user-profile-link:focus::before {
   background-color: var(--basic-grey);
 }
 
 .user-profile-link:active::before {
   background-color: var(--basic-greylight)
+}
+
+.user-profile-link:focus {
+  outline: none;
 }
 
 .logout-link {
@@ -551,7 +556,8 @@ button {
   background-color: var(--basic-greylight);
 }
 
-.logout-link:hover {
+.logout-link:hover,
+.logout-link:focus {
   background-color: var(--basic-grey);
 }
 
@@ -594,7 +600,8 @@ button {
   color: var(--basic-greydark);
 }
 
-.user-info-links-item a:hover {
+.user-info-links-item a:hover,
+.user-info-links-item a:focus {
   color: var(--basic-red);
 }
 
@@ -1891,6 +1898,13 @@ button {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.filter-option input:focus ~ label {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--basic-greydark);
+  text-underline-offset: 2px;
 }
 
 .filter-option label::before {
