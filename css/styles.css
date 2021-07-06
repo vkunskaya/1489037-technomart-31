@@ -1093,7 +1093,7 @@ button {
 
 .product {
   display: grid;
-  grid-template-rows: auto 21px min-content;
+  grid-template-rows: 164px auto 21px min-content;
   justify-items: center;
   width: 220px;
   min-height: 318px;
@@ -1103,13 +1103,7 @@ button {
   background-color: var(--basic-white);
 }
 
-.product-interactive-container {
-  display: grid;
-  grid-template-rows: 164px auto;
-  justify-items: center;
-}
-
-.product-interactive-container:focus {
+.product:focus {
   outline: none;
 }
 
@@ -1138,6 +1132,8 @@ button {
 }
 
 .product-old-price {
+  display: inline-block;
+  margin-top: auto;
   color: var(--basic-inactive-text);
 }
 
@@ -1260,12 +1256,12 @@ button {
 }
 
 .product:hover .product-image,
-.product-interactive-container:focus-within .product-image {
+.product:focus-within .product-image {
   display: none;
 }
 
 .product:hover .product-buttons-container,
-.product-interactive-container:focus-within .product-buttons-container {
+.product:focus-within .product-buttons-container {
   display: flex;
 }
 
@@ -1490,9 +1486,8 @@ button {
   display: block;
 }
 
-.company-contact-modal-link {
-  display: block;
-  text-align: center;
+.company-contact-modal-button {
+  width: 100%;
 }
 
 /* modal window */
@@ -1553,6 +1548,10 @@ button {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+}
+
+.animate-modal {
+  animation: bounce 0.6s;
 }
 
 /* contact company modal */
@@ -2109,4 +2108,24 @@ button {
 .catalog-products-description p {
   line-height: 24px;
   text-transform: none;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
