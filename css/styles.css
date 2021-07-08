@@ -65,6 +65,7 @@
   --basic-grey: #3D546F;
   --basic-greydark: #32425C;
   --basic-greylight: #C5C5C5;
+  --basic-greyhover: #B5B5B5;
   --basic-background: #F3F7F9;
   --basic-backgrounddark: #F9F5F0;
   --basic-backgrounddarkest: #F4F4F4;
@@ -1901,19 +1902,21 @@ button {
   content: "";
   margin-right: 10px;
   display: block;
-
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: var(--basic-greylight);
 }
 
 .filter-check-item label::before {
   width: 26px;
   height: 23px;
-  background-image: url("../img/icons/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-mask-image: url("../img/icons/checkbox-off.svg");
+  mask-image: url("../img/icons/checkbox-off.svg");
 }
 
 .filter-check-item input:checked + label::before {
-  background-image: url("../img/icons/checkbox-on.svg");
+  -webkit-mask-image: url("../img/icons/checkbox-on.svg");
+  mask-image: url("../img/icons/checkbox-on.svg");
 }
 
 .filter-radio-item {
@@ -1923,11 +1926,24 @@ button {
 .filter-radio-item label::before {
   width: 25px;
   height: 25px;
-  background-image: url("../img/icons/radio-off.svg");
+  -webkit-mask-image: url("../img/icons/radio-off.svg");
+  mask-image: url("../img/icons/radio-off.svg");
 }
 
 .filter-radio-item input:checked + label::before {
-  background-image: url("../img/icons/radio-on.svg");
+  -webkit-mask-image: url("../img/icons/radio-on.svg");
+  mask-image: url("../img/icons/radio-on.svg");
+}
+
+.filter-option:hover label::before,
+.filter-option:hover input:checked + label::before,
+.filter-option input:focus ~ label::before,
+.filter-option input:checked:focus + label::before {
+  background-color: var(--basic-greyhover);
+}
+
+.filter-option input:disabled ~ label {
+  opacity: 0.4;
 }
 
 .apply-filter-button {
