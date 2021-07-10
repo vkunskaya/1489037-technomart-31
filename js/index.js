@@ -14,7 +14,8 @@ function addOpenModalListener(element, modal, prevent = true, animate = false) {
     }
 
     if (animate) {
-      modal?.classList?.add('animate-modal');
+      modal?.classList?.add('modal-show');
+      setTimeout(() => contactCompanyModal?.classList.remove('modal-show'), 600);
     }
 
     openModal(modal);
@@ -37,6 +38,12 @@ function addBuyProductListener(element, modal) {
       openModal(modal);
     }
   });
+}
+
+function unsetRequired(field) {
+  if (field) {
+    field.required = false;
+  }
 }
 
 /* add listenters to cart modal buttons */
@@ -68,6 +75,10 @@ const companyMapModal = document.querySelector('.modal-map');
 const closeCompanyMapButton = companyMapModal?.querySelector('.modal-close-button');
 const popularProductsList = document.querySelector('.popular-products-list');
 
+unsetRequired(nameField);
+unsetRequired(emailField);
+unsetRequired(textField);
+
 /* add open/close listeners to modals */
 addOpenModalListener(contactCompanyButton, contactCompanyModal, true, true);
 addCloseModalListener(closeContactCompanyButton, contactCompanyModal);
@@ -80,16 +91,21 @@ addBuyProductListener(popularProductsList, cartModal);
 /* process company contact form submit, save name and email data to local storage */
 const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-contactCompanyForm?.addEventListener('submit', () => {
-  if (nameField?.value) {
+contactCompanyForm?.addEventListener('submit', event => {
+  if (!nameField?.value || !emailField?.value || !textField?.value) {
+    event.preventDefault();
+    console.log('submit');
+    contactCompanyModal?.classList.add('modal-error');
+    setTimeout(() => contactCompanyModal?.classList.remove('modal-error'), 600);
+  } else {
     localStorage.setItem('name', nameField.value);
-  }
 
-  if(emailField?.value && emailRegExp.test(emailField?.value)) {
-    localStorage.setItem('email', emailField?.value);
-  }
+    if(emailRegExp.test(emailField?.value)) {
+      localStorage.setItem('email', emailField?.value);
+    }
 
-  closeModal(contactCompanyModal);
+    closeModal(contactCompanyModal);
+  }
 });
 
 /* restore user's name and email from local storage, focus on appropriate field */

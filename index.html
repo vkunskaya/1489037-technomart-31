@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicons/180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="page-body">
@@ -21,6 +21,11 @@
         </a>
         <p class="search-site">
           <label class="visually-hidden" for="search-page-input">Поиск по сайту</label>
+          <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
+              fill="#fff" />
+          </svg>
           <input id="search-page-input" type="text" placeholder="Поиск:">
         </p>
         <ul class="clear-list main-header-menu">
@@ -38,7 +43,17 @@
           г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
         </address>
         <ul class="clear-list main-header-entry">
-          <li class="main-header-entry-item entry-login"><a href="blank.html">Войти</a></li>
+          <li class="main-header-entry-item">
+            <a class="entry-login" href="blank.html">
+              <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z" fill="#C5C5C5" />
+                <path
+                  d="M16.18 15.01h-4.79V17h4.79c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 0h-4.79v1.99h4.79c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z"
+                  fill="#C5C5C5" />
+              </svg>
+              Войти
+            </a>
+          </li>
           <li class="main-header-entry-item entry-registration"><a href="blank.html">Регистрация</a></li>
         </ul>
         <nav class="main-navigation">
@@ -92,11 +107,17 @@
                 <p>Соседям на радость!</p>
               </div>
               <div class="slider-item-buttons-container">
-                <button class="catalog-slider-direction-button slider-previous-button" type="button">
-                  <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
+                <button class="catalog-slider-direction-button slider-previous-button" type="button"
+                  aria-label="Предыдущий слайд">
+                  <svg width="21" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff" />
+                  </svg>
                 </button>
-                <button class="catalog-slider-direction-button slider-next-button" type="button">
-                  <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
+                <button class="catalog-slider-direction-button slider-next-button" type="button"
+                  aria-label="Следующий слайд">
+                  <svg width="21" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff" />
+                  </svg>
                 </button>
               </div>
               <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
@@ -107,11 +128,17 @@
                 <p>Настоящие мужские игрушки</p>
               </div>
               <div class="slider-item-buttons-container">
-                <button class="catalog-slider-direction-button slider-previous-button" type="button">
-                  <img src="img/icons/left.svg" width="21" height="39" alt="Предыдущий слайд">
+                <button class="catalog-slider-direction-button slider-previous-button" type="button"
+                  aria-label="Предыдущий слайд">
+                  <svg width="21" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff" />
+                  </svg>
                 </button>
-                <button class="catalog-slider-direction-button slider-next-button" type="button">
-                  <img src="img/icons/left.svg" width="21" height="39" alt="Следующий слайд">
+                <button class="catalog-slider-direction-button slider-next-button" type="button"
+                  aria-label="Следующий слайд">
+                  <svg width="21" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff" />
+                  </svg>
                 </button>
               </div>
               <a class="page-button catalog-slider-open-link" href="catalog.html">Открыть каталог</a>
