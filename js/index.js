@@ -1,10 +1,17 @@
 /* common functions */
+let openedModal = null;
+
 function openModal(modal) {
+  if (openedModal) {
+    closeModal(openedModal);
+  }
   modal?.classList?.remove('modal-closed');
+  openedModal = modal;
 }
 
 function closeModal(modal) {
   modal?.classList?.add('modal-closed');
+  openedModal = null;
 }
 
 function addOpenModalListener(element, modal, prevent = true, animate = false) {
@@ -63,7 +70,7 @@ cartModal?.addEventListener('click', ({ target }) => {
 addCloseModalListener(makeOrderLink, cartModal, false);
 
 /* get index.html elements */
-const contactCompanyButton = document.querySelector('.company-contact-modal-button');
+const contactCompanyButton = document.querySelector('.company-contact-modal-link');
 const contactCompanyModal = document.querySelector('.modal-contact-company');
 const contactCompanyForm = contactCompanyModal?.querySelector('.contact-company-form');
 const nameField = contactCompanyForm?.querySelector('[name="name"]');

@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicons/180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body class="page-body">
@@ -161,7 +161,7 @@
         <ul class="clear-list popular-products-list">
           <li class="product" tabindex="0">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <img class="product-image" src="img/catalog/perforator-9000.jpg" width="127" height="112" alt="">
+            <img class="product-image" src="img/catalog/perforator-9000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 9000">
             <div class="product-buttons-container">
               <button class="product-button product-buy-button" type="button">Купить</button>
               <button class="product-button product-bookmarks-button" type="button">В закладки</button>
@@ -176,7 +176,7 @@
               <button class="product-button product-buy-button" type="button">Купить</button>
               <button class="product-button product-bookmarks-button" type="button">В закладки</button>
             </div>
-            <img class="product-image" src="img/catalog/perforator-3000.jpg" width="127" height="112" alt="">
+            <img class="product-image" src="img/catalog/perforator-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000">
             <del class="product-price product-old-price" aria-label="Старая цена товара: 22500 Р.">22500 Р.</del>
             <a class="product-price product-current-price" href="#" aria-label="Текущая цена товара: 15500 Р.">15500
               Р.</a>
@@ -187,7 +187,7 @@
               <button class="product-button product-buy-button" type="button">Купить</button>
               <button class="product-button product-bookmarks-button" type="button">В закладки</button>
             </div>
-            <img class="product-image" src="img/catalog/perforator-6000.jpg" width="127" height="112" alt="">
+            <img class="product-image" src="img/catalog/perforator-6000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 6000">
             <del class="product-price product-old-price" aria-label="Старая цена товара: 30500 Р.">30500 Р.</del>
             <a class="product-price product-current-price" href="#" aria-label="Текущая цена товара: 25500 Р.">25500
               Р.</a>
@@ -198,7 +198,7 @@
               <button class="product-button product-buy-button" type="button">Купить</button>
               <button class="product-button product-bookmarks-button" type="button">В закладки</button>
             </div>
-            <img class="product-image" src="img/catalog/perforator-2000.jpg" width="127" height="112" alt="">
+            <img class="product-image" src="img/catalog/perforator-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000">
             <del class="product-price product-old-price" aria-label="Старая цена товара: 30500 Р.">22500 Р.</del>
             <a class="product-price product-current-price" href="#" aria-label="Текущая цена товара: 12500 Р.">12500
               Р.</a>
@@ -338,7 +338,7 @@
           <img src="img/map-small.png" width="300" height="158"
             alt="Наш адрес на карте: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
         </a>
-        <button class="page-button company-contact-modal-button">Заблудились? Напишите нам!</button>
+        <a href="blank.html" class="page-button company-contact-modal-link">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -408,15 +408,15 @@
     <form class="modal-interactive contact-company-form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="contact-company-form-content">
         <p class="name-container">
-          <label class="contact-company-form-label name-field">Ваше имя:</label>
-          <input class="page-input" type="text" name="name" placeholder="Имя Фамилия" required>
+          <label class="contact-company-form-label name-field" for="user-name">Ваше имя:</label>
+          <input id="user-name" class="page-input" type="text" name="name" placeholder="Имя Фамилия" required>
         </p>
         <p class="email-container">
-          <label class="contact-company-form-label email-field">Ваш e-mail:</label>
-          <input class="page-input" type="email" name="email" placeholder="email@example.com" required>
+          <label class="contact-company-form-label email-field" for="user-email">Ваш e-mail:</label>
+          <input id="user-email" class="page-input" type="email" name="email" placeholder="email@example.com" required>
         </p>
         <p class="email-text-container">
-          <label class="contact-company-form-label" for="email-textarea"> Текст письма: </label>
+          <label class="contact-company-form-label" for="email-textarea">Текст письма:</label>
           <textarea id="email-textarea" name="email-text" placeholder="В свободной форме" required></textarea>
         </p>
       </div>
