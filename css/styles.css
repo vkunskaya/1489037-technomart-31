@@ -1111,6 +1111,7 @@ button {
 
 .product-old-price {
   display: inline-block;
+  vertical-align: middle;
   color: var(--basic-inactive-text);
 }
 
